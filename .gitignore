@@ -19,3 +19,6 @@ target/spring-boot-docker-multicontainer-demo-0.0.1-SNAPSHOT.jar.original
 target/test-classes/com/example/demo/multicontainer/SpringBootDataJpaExampleApplicationTests.class
 .classpath
 .project
+target/classes/META-INF/MANIFEST.MF
+target/classes/META-INF/maven/com.example.demo.multicontainer/spring-boot-docker-multicontainer-demo/pom.properties
+target/classes/META-INF/maven/com.example.demo.multicontainer/spring-boot-docker-multicontainer-demo/pom.xml
