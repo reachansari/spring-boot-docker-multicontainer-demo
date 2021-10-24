@@ -1,1 +1,1 @@
-# spring-boot-docker-multicontainer
+# spring-boot-docker-multicontainer-demo
