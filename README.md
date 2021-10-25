@@ -1,4 +1,6 @@
-# spring-boot-docker-multicontainer-demo
+![](./img/poster.png)
+
+## [spring-boot-docker-multicontainer-demo](#spring-boot-postgres-demo)
 
 Run spring boot application and postgres as multicontainer using docker compose
 
