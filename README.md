@@ -47,3 +47,10 @@ Run spring boot application and postgres as multicontainer using docker compose
 `Eg: docker image rm app-springboot-postgresql`
 
 
+## [Reference](#reference)
+
+Please follow on my medium for step by step executions.
+
+https://medium.com/@reachansari/spring-boot-and-spring-data-jpa-postgres-multi-container-with-docker-compose-f94f56622061
+
+
