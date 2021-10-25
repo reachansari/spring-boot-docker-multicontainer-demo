@@ -1,10 +1,6 @@
-FROM java:8
-FROM maven:alpine
-WORKDIR /app
-COPY . /app
-RUN mvn -v
-RUN mvn clean install -DskipTests
+FROM openjdk:8-jdk-alpine
+LABEL maintainer="reachansari" 
+VOLUME /tmp
 EXPOSE 8080
-LABEL maintainer=“reachansari”
-ADD ./target/spring-boot-docker-multicontainer-demo-0.0.1-SNAPSHOT.jar spring-boot-data-jpa-example-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","spring-boot-data-jpa-example-0.0.1-SNAPSHOT.jar"]
+ADD target/spring-boot-docker-multicontainer-demo-0.0.1-SNAPSHOT.jar springbootpostgresqldocker.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/springbootpostgresqldocker.jar"]

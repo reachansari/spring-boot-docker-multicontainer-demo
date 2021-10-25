@@ -1,23 +1,18 @@
-version: '3'
-
+version: '3.1'
 services:
-  mysql-docker-container:
-    image: mysql:latest
-    environment:
-      - MYSQL_ROOT_PASSWORD=root123
-      - MYSQL_DATABASE=spring_app_db
-      - MYSQL_USER=app_user
-      - MYSQL_PASSWORD=test123
-    volumes:
-      - /data/mysql
-  spring-boot-jpa-app:
-    image: spring-boot-jpa-image
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    depends_on:
-      - mysql-docker-container
+  app:
+    container_name: app-springboot-postgresql
+    image: app-springboot-postgresql
+    build: ./
     ports:
-      - 8087:8080
-    volumes:
-      - /data/spring-boot-app
+      - "8080:8080"
+    depends_on:
+      - dbpostgresql
+  dbpostgresql:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=mydb
